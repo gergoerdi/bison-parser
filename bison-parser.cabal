@@ -1,0 +1,29 @@
+name:                bison-parser
+version:             0.1.0.0
+synopsis:            Parser for Bison's grammar definition format
+-- description:         
+license:             MIT
+license-file:        LICENSE
+author:              Gergo Erdi <gergo@erdi.hu>
+maintainer:          gergo@erdi.hu
+-- copyright:           
+category:            Language
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     
+    Language.Bison.Summary.Syntax, 
+    Language.Bison.Summary.Parser, 
+    Language.Bison.Summary.Parser.Lexer
+  -- other-modules:       
+  other-extensions:    LambdaCase, CPP
+  build-depends:
+    base >= 4.7 && < 5,
+    parsec,
+    containers,
+    array
+  hs-source-dirs:      src
+  build-tools:         alex
+  default-language:    Haskell2010
